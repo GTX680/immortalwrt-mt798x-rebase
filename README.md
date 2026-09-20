@@ -6,14 +6,11 @@ This repository is worked on ImmortalWrt with MTK OpenWrt Feeds patches imported
 
 ## Commit Cutoff Revisions
 
-### ImmortalWrt: [1d34e7b](https://github.com/immortalwrt/immortalwrt/commit/1d34e7b88708d4eeb3feabe0b2b6f835a909c9c0)
+### ImmortalWrt: [37013c8](https://github.com/immortalwrt/immortalwrt/commit/37013c8153ac6c9e11f4f9210d22832beb3bcb64)
 
 ```
-mediatek: fix merge conflict
+Merge Official Source
 
-Fixes: #2458
-
-Fixes: 3a0e732472ba ("Merge Official Source")
 Signed-off-by: Tianling Shen <cnsztl@immortalwrt.org>
 ```
 
