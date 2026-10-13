@@ -8,22 +8,22 @@ define Device/clx_s20-common
 endef
 
 define Device/clx_s20l
-  $(call Device/clx_s20-common)
+  DEVICE_VENDOR := CLX
   DEVICE_MODEL := S20L
   DEVICE_DTS := mt7986a-clx-s20l
+  DEVICE_DTS_DIR := ../dts-ext
+  DEVICE_PACKAGES := kmod-usb3 automount f2fsck mkf2fs e2fsprogs
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += clx_s20l
 
 define Device/clx_s20m
-  $(call Device/clx_s20-common)
-  DEVICE_MODEL := S20M
+  DEVICE_VENDOR := CLX
+  DEVICE_MODEL := S20m
   DEVICE_DTS := mt7986a-clx-s20m
-  DEVICE_PACKAGES += -wpad-openssl -kmod-mt_wifi -kmod-conninfra -kmod-warp \
-    -wifi-dats -wifi-profile -mtwifi-cfg -mtwifi-cfg-ucode \
-    -luci-app-mtwifi-cfg -luci-i18n-mtwifi-cfg-zh-cn \
-    -kmod-mt76 -kmod-mt76-connac -kmod-mt76-core -kmod-mt7915e \
-    -kmod-mt7915-firmware -kmod-mt7916-firmware -kmod-mt7986-firmware \
-    -mt7986-wo-firmware
+  DEVICE_DTS_DIR := ../dts-ext
+  DEVICE_PACKAGES := kmod-usb3 automount f2fsck mkf2fs e2fsprogs
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += clx_s20m
 
